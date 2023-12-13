@@ -9,7 +9,11 @@ int main()
     char i;
     string nome, cognome;
     cout << "Questo è un test per scoprire quanto incide lo stile della tua vita sull'ambiente:"  << endl;
-    cout << "Ecco le domande:" << endl << endl;
+    cout << "Nome: ";
+    cin >> nome;
+    cout << "Cognome: ";
+    cin >> cognome;
+    cout << endl <<"Ecco le domande:" << endl << endl;
     cout << "Domande sulla casa:" << endl << "1. Quante persone vivono con te?" << endl;
     cout << "a. 1" << endl << "b. 2" << endl << "c. 3" << endl << "d. 4" << endl << "e. 5 o più" << endl;
     do
@@ -389,7 +393,7 @@ int main()
                 default : cout << "Inserisci un carattere corretto" << endl;
             }
     } while ((i!='a')&&(i!='b')&&(i!='c')&&(i!='d'));
-    cout << "Il risultato è ";
+    cout << "Il risultato di " << nome << " " << cognome << " è ";
     if (punti<120)
     {
         cout << "impronta ecologica inferiore a 4 ettari" << endl;
@@ -406,9 +410,13 @@ int main()
     {
         cout << "impronta ecologica tra 7.7 e 10 ettari" << endl;
     }
-    cout << endl << "L’impronta ecologica media mondiale richiesta dagli scienziati è di 1.7 ettari a persona; per ottenere una punteggio inferiore a 4 ettari è indice di un comportamento eco-sostenibile." << endl;
+    cout << endl << "L’impronta ecologica media mondiale richiesta dagli scienziati è di 1.7 ettari a persona;" << endl << "per ottenere una punteggio inferiore a 4 ettari è indice di un comportamento eco-sostenibile." << endl;
     cout << endl << "Vuoi vedere il codice? [y/n]: ";
     cin >> i;
+    while ((i!='y')&&(i!='n')) {
+        cout << "Inserisci un valore valido [y/n]" << endl << ": ";
+        cin >> i;
+    }
     if (i=='y')
     {
         cout << "Vai su https://eletronico2.github.io/OpenDay2024.html" << endl;
